@@ -1,6 +1,73 @@
 {% set title = "Home" %} 
 {% extends "layout/app.html" %} 
 {% block body %}
-<h1>Hello World</h1>
-<h3>This is Flask Boiler Plate Template designed by <a href="https://semikolan.co"> SemiKolan</a></h3>
+
+
+<style>
+body{
+overflow-x:hidden;
+}
+   .videocontainer{
+      position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+   }
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.videomask{
+   
+  width: 100%;
+  height: 100%;
+  background: var(--palatinatepurple);
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.videocontent{
+   
+  width: 100%;
+  height: 100%;
+  font-size:6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color:white;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+</style>
+
+{% set video = [
+   "https://www.theweddingfilmer.com/video/home/JpKuWIk34BXwMvCmCqTWykdtZRNiiPcqy7NApyyF.mp4?v=3",
+   "https://www.theweddingfilmer.com/media/09_Rituals.mp4?v=3",
+   "https://www.theweddingfilmer.com/media/01_Beach.mp4",
+   "https://www.theweddingfilmer.com/media/03_Fireworks.mp4?v=3"
+   
+   ] %}
+<div class="videocontainer">
+<video poster="screenshot.jpg" autoplay playsinline muted loop>
+      <!-- <source src="https://file-examples-com.github.io/uploads/2020/03/file_example_WEBM_1280_3_6MB.webm" type="video/webm"> -->
+      <source src="{{ video[ range(video|length)|random ] }}" type="video/mp4">
+    </video>
+    <div class="videomask"></div>
+    <div class="videocontent">
+      <img src="{{ url_for('static', filename='assets/images/logowhite.png') }}" alt="">
+    </div>
+    
+
+   </div>
+   
+
 {% endblock %}

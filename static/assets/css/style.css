@@ -1,1 +1,57 @@
 /* Your Style here. */
+
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+/* ----------------------------------- */
+/* ------- Root Vartiables ----------- */
+/* ----------------------------------- */
+
+ /* Color Pallete: https://www.schemecolor.com/vital-information.php */
+:root{
+   --palatinatepurple: #631A51;
+   --deeppurple: #992959;
+   --orange:#FFB250;
+   --green:#85A562;
+   --blue:#3D5189;
+
+   --philosopher:'Philosopher', sans-serif;
+}
+
+/* ----------------------------------- */
+/* ------ End Root Vartiables -------- */
+/* ----------------------------------- */
+/* ----------------------------------- */
+/* ------- Custom ScrollBar CSS ------ */
+/* ----------------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--deeppurple);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--palatinatepurple);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange);
+}
+
+
+/* ----------------------------------- */
+/* ---- End Custom ScrollBar CSS ----- */
+/* ----------------------------------- */
+
