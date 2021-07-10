@@ -32,7 +32,6 @@ def not_found(e):
 def index():
     getUserData("Index Page")
     return render_template('index.html')
-
 @app.route('/about')
 def about():
     getUserData("About Page")
