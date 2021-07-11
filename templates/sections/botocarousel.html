@@ -1,1 +1,41 @@
-<h2>This is Boto Carousel</h2>
+
+	<!-- Stylesheets -->
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='boto/css/bootstrap.min.css') }}"/> -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='boto/css/font-awesome.min.') }}css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='boto/css/slicknav.min.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='boto/css/fresco.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='boto/css/slick.css') }}"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='boto/css/style.css') }}"/>
+
+    <!-- {{ parallax('About')}} -->
+	<!-- Hero Section -->
+	<section class="hero__section">
+		<div class="hero-slider">
+            {% for img in range(1,18) %}
+			<div class="slide-item">
+				<a class="fresco" href="{{ url_for('static', filename='assets/images/pics/'~img~'.jpg') }}" data-fresco-group="projects">
+					<img src="{{ url_for('static', filename='assets/images/pics/'~img~'.jpg') }}" alt="">
+				</a>
+			</div>
+            {% endfor %}
+
+		</div>
+		<div class="hero-text-slider">
+			<div class="text-item">
+				<!-- <h2>Nature</h2>
+				<p>Photography</p> -->
+			</div>
+		</div>
+	</section>
+	<!-- Hero Section end -->
+
+	
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{{ url_for('static', filename='boto/js/vendor/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='boto/js/jquery.slicknav.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='boto/js/slick.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='boto/js/fresco.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='boto/js/main.js') }}"></script>

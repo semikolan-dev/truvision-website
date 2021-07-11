@@ -6,6 +6,10 @@
     
     <title>{{title}} | SemiKolan | Never Stop Building</title>
     
+    {% include 'layout/styles.html' %}
+    {% include 'layout/metatags.html' %}
+    {% include 'layout/gtags.html' %}
+    
     <!-- Style.css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
     <!-- End layout styles -->
@@ -14,13 +18,11 @@
 
     
 
-    {% include 'layout/styles.html' %}
-    {% include 'layout/metatags.html' %}
-    {% include 'layout/gtags.html' %}
 
 </head>
 
 <body>
+    {% from 'components/parallax.html' import parallax  %}
     {% include 'partials/header.html' %}
     {% block body %}{% endblock %}
     {% include 'partials/footer.html' %}

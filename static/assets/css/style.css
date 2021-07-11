@@ -1,37 +1,54 @@
 /* Your Style here. */
 
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+@font-face {
+  font-family: blackchancery;
+  src: url("/static/assets/fonts/blackchancery.regular.ttf");
+}
 
 /* ----------------------------------- */
 /* ------- Root Vartiables ----------- */
 /* ----------------------------------- */
 
- /* Color Pallete: https://www.schemecolor.com/vital-information.php */
-:root{
-   --palatinatepurple: #631A51;
-   --deeppurple: #992959;
-   --orange:#FFB250;
-   --green:#85A562;
-   --blue:#3D5189;
+/* Color Pallete: https://www.schemecolor.com/vital-information.php */
+:root {
+  --palatinatepurple: #631A51;
+  --deeppurple: #992959;
+  --orange: #FFB250;
+  --green: #85A562;
+--blue: #3D5189;
 
-   --philosopher:'Philosopher', sans-serif;
+
+  --royal: blackchancery;
+  --ptext:'Lobster Two', cursive;
+  --philosopher: 'Philosopher', sans-serif;
 }
 
 /* ----------------------------------- */
 /* ------ End Root Vartiables -------- */
 /* ----------------------------------- */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
   background: var(--palatinatepurple);
- overflow-x:hidden;
-   }
-   
+  overflow-x: hidden;
+}
+
 /* ----------------------------------- */
 /* ------- Custom ScrollBar CSS ------ */
 /* ----------------------------------- */
@@ -60,3 +77,21 @@ body{
 /* ---- End Custom ScrollBar CSS ----- */
 /* ----------------------------------- */
 
+
+.container-80{
+  width: 80%;
+  margin: auto;
+}
+.anchor{
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--philosopher);
+}
+.anchor:hover{
+  color:var(--orange) !important;
+}
+.contentdiv{
+  padding: 5% 0;
+}
