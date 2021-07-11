@@ -2,13 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-
 /* ----------------------------------- */
 /* ------- Root Vartiables ----------- */
 /* ----------------------------------- */
@@ -27,6 +20,18 @@
 /* ----------------------------------- */
 /* ------ End Root Vartiables -------- */
 /* ----------------------------------- */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--palatinatepurple);
+ overflow-x:hidden;
+   }
+   
 /* ----------------------------------- */
 /* ------- Custom ScrollBar CSS ------ */
 /* ----------------------------------- */

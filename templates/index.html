@@ -2,102 +2,15 @@
 {% extends "layout/app.html" %} 
 {% block body %}
 
+{% include 'sections/videocontainer.html' %}
+{% include 'sections/botocarousel.html' %}
+{% include 'sections/homeabout.html' %}
+{% include 'sections/homegallery.html' %}
+{% include 'sections/homeservices.html' %}
+{% include 'sections/testimonial.html' %}
+{% include 'sections/homefaqs.html' %}
+{% include 'sections/homecontact.html' %}
 
-<style>
-body{
-overflow-x:hidden;
-}
-   .videocontainer{
-      position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-   }
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.videomask{
-   
-  width: 100%;
-  height: 100%;
-  background: var(--palatinatepurple);
-  opacity: 0.4;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.videocontent{
-   opacity: 0.7;
-  width: 100%;
-  height: 100%;
-  font-size:6em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /*position: absolute;*/
-  color:white;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.centerlogo{
-max-width:300px;
-position: fixed;
-top:47%;
-}
-.leftul{
-  margin-right: 90px;
-}
-.rightul{
-  margin-left: 90px;
-}
-</style>
 
-{% set video = [
-   "https://www.theweddingfilmer.com/video/home/JpKuWIk34BXwMvCmCqTWykdtZRNiiPcqy7NApyyF.mp4?v=3",
-   "https://www.theweddingfilmer.com/media/09_Rituals.mp4?v=3",
-   "https://www.theweddingfilmer.com/media/01_Beach.mp4",
-   "https://www.theweddingfilmer.com/media/03_Fireworks.mp4?v=3"
-   
-   ] %}
-<div class="videocontainer">
-<video poster="screenshot.jpg" autoplay playsinline muted loop>
-      <!-- <source src="https://file-examples-com.github.io/uploads/2020/03/file_example_WEBM_1280_3_6MB.webm" type="video/webm"> -->
-      <source src="{{ video[ range(video|length)|random ] }}" type="video/mp4">
-    </video>
-    <div class="videomask"></div>
-    <div class="videocontent">
-      <img src="{{ url_for('static', filename='assets/images/logowhite.png') }}" id="logoimg"  class="centerlogo" alt="">
-    </div>
-    
 
-   </div>
-   
-<script type="text/javascript">
-  window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if(document.documentElement.scrollTop < 500 ){
-  var logowidth = 300 - (document.documentElement.scrollTop/2);
-  var logotop = 50 - (document.documentElement.scrollTop/8);
-  var margin = document.documentElement.scrollTop* (90/300)
-  logowidth = logowidth<100 ? 100 : logowidth;
-  logotop = logotop<0 ? 0 : logotop;
-  margin = margin>90 ? 90 : margin;
-   document.getElementById("logoimg").style.width = logowidth + "px";
-   document.getElementById("logoimg").style.top = logotop + "%";
-   document.getElementsByClassName('leftul')[0].style.marginRight =  margin + 'px';
-   document.getElementsByClassName('rightul')[0].style.marginLeft =  margin + 'px';
-    //console.log(document.getElementById("logoimg").style.width);
-    console.log(margin);
-  }  
-}
-</script>
 {% endblock %}
