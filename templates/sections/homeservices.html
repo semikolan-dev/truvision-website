@@ -391,7 +391,7 @@
   }
 }
 </style>
-{{ parallax('Services')}}
+{{ parallax('Services',range(1,18)|random)}}
 <div class="contentdiv">
 <section class="gallery">
     <div class="container">
@@ -437,8 +437,9 @@
       </div>
     </div>
   </section>
-      <center>  <a href="#" class="anchor">View More...</a></center>
-    </div>
+               <center> 
+                {{anchor('View More...',"#")}}
+            </center> </div>
 
 <script>
     const imgContent = document.querySelectorAll('.img-content-hover');

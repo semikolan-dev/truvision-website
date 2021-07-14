@@ -18,7 +18,7 @@
      
     width: 100%;
     height: 100%;
-    background: var(--palatinatepurple);
+    background: var(--primary);
     opacity: 0.4;
     position: absolute;
     top: 0;
@@ -42,7 +42,7 @@
   .centerlogo{
   max-width:300px;
   position: fixed;
-  top:47%;
+  top:30%;
   }
 </style>
 
@@ -70,13 +70,18 @@
    window.onscroll = function() {scrollFunction()};
  
  function scrollFunction() {
-   if(document.documentElement.scrollTop < 500 ){
+   var cond1 =  document.documentElement.scrollTop < 500;
+   var cond2 =  document.documentElement.scrollTop < '100vh';
+   if(cond1 || cond2){
+    showTransNav()
+
+     if(cond1){
    var logowidth = 300 - (document.documentElement.scrollTop/2);
-   var logotop = 50 - (document.documentElement.scrollTop/8);
+   var logotop = 30 - (document.documentElement.scrollTop/13);
    var margin = document.documentElement.scrollTop* (90/300)
-   logowidth = logowidth<100 ? 100 : logowidth;
+   logowidth = logowidth<70 ? 70 : logowidth;
    logotop = logotop<0 ? 0 : logotop;
-   margin = margin>90 ? 90 : margin;
+   margin = margin>70 ? 70 : margin;
     document.getElementById("logoimg").style.width = logowidth + "px";
     document.getElementById("logoimg").style.top = logotop + "%";
     document.getElementsByClassName('leftul')[0].style.marginRight =  margin + 'px';
@@ -84,5 +89,36 @@
      //console.log(document.getElementById("logoimg").style.width);
      console.log(margin);
    }  
+   else{
+
+    document.getElementById("logoimg").style.width = 100 + "px";
+    document.getElementById("logoimg").style.top = 0 + "%";
+    document.getElementsByClassName('leftul')[0].style.marginRight =  90 + 'px';
+    document.getElementsByClassName('rightul')[0].style.marginLeft =  90 + 'px';
+   }
+
+
+
+
+
+
+
+
+    
+
+   }
+   else{
+    showSolidNav()
+   }
+   function showSolidNav(){
+    $('.transheader').slideUp();
+    $('#logoimg').hide()
+     $('.solidheader').slideDown();
+   }
+   function showTransNav(){
+     $('.solidheader').slideUp();
+    $('#logoimg').show()
+    $('.transheader').slideDown();
+   }
  }
  </script>
