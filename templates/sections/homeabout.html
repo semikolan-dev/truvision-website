@@ -8,13 +8,15 @@
         word-spacing: 0.3;
     }
 </style>
-{{ parallax('About')}}
+{{ parallax('About',range(1,18)|random)}}
 <div class="contentdiv">
     <div class="container-80">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ce, voluptate aperiam
             accusamus commodi nulla cupiditate rerum quia voluptatum quibusdam adipisci animi ipsa, voluptates tempore
             eligendi quos id sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium veniam corporis ex doloremque nobis quas vero, repellat voluptas nostrum distinctio id sunt dignissimos consequatur facere iure mollitia debitis neque obcaecati. Unde animi sed commodi expedita aliquid necessitatibus`</p>
-            <center>  <a href="#" class="anchor">View More...</a></center>
+            <center> 
+                {{anchor('View More...',"#")}}
+            </center>
             
 
     </div>

@@ -14,8 +14,10 @@
 
 /* Color Pallete: https://www.schemecolor.com/vital-information.php */
 :root {
-  --palatinatepurple: #631A51;
-  --deeppurple: #992959;
+  /* --primary: #631A51; 
+  --secondary: #992959;*/
+  --primary: #061621;
+  --secondary: #0d3149;
   --orange: #FFB250;
   --green: #85A562;
 --blue: #3D5189;
@@ -45,7 +47,7 @@ a:focus {
 }
 
 body {
-  background: var(--palatinatepurple);
+  background: var(--primary);
   overflow-x: hidden;
 }
 
@@ -59,12 +61,12 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--deeppurple);
+  background: var(--secondary);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--palatinatepurple);
+  background: var(--primary);
 }
 
 /* Handle on hover */
@@ -82,7 +84,7 @@ body {
   width: 80%;
   margin: auto;
 }
-.anchor{
+/* .anchor{
   text-decoration: none;
   color: #fff;
   text-align: center;
@@ -91,7 +93,47 @@ body {
 }
 .anchor:hover{
   color:var(--orange) !important;
-}
+} */
 .contentdiv{
   padding: 5% 0;
+}
+
+
+.anchor a {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-size: 2.1rem;
+  background: linear-gradient(to bottom, var(--orange), var(--orange) 60%, var(--primary) 60%, var(--primary) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  transition: background 0.2s ease-out;
+  white-space: nowrap;
+  font-family: var(--philosopher);
+}
+
+.anchor {
+  position: relative;
+}
+
+.anchor:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 9px;
+  background: var(--orange);
+  border-radius: 3px;
+  bottom: 0px;
+  transition: all 0.2s ease-out;
+}
+
+.anchor a:hover {
+  background-position: 0 11px;
+}
+
+.anchor:hover:before {
+  transform: translateY(10px)
 }

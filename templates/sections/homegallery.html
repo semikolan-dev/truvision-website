@@ -54,14 +54,16 @@
         padding:0px;
       }
 </style>
-{{ parallax('Gallery')}}
+{{ parallax('Gallery',range(1,18)|random)}}
 <div class="contentdiv">
 <div id="gallery" class="container-fluid">  
     {% for img in [1,2,5,4,9,8,3,10,6,7] %}
     <img class="galleryimg" src="{{ url_for('static', filename='assets/images/pics/'~img~'.jpg') }}" class="img-responsive">
     {% endfor %}
-        <center>  <a href="#" class="anchor">View More...</a></center>
   </div>
+  <center> 
+    {{anchor('View More...',"#")}}
+</center>
   </div>
   
   <div class="modal fade" id="myModal">

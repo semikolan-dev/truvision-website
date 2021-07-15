@@ -4,7 +4,12 @@
       width: 100vw;
       z-index: 1;
       padding:20px 0;
+      min-height: 70px;
       
+   }
+   .solidheader{
+      display: none;
+      background: var(--primary);
    }
    nav{
       margin:auto;
@@ -26,10 +31,14 @@
       display: inline;
       padding: 0;
    }
-   
+   nav img{
+      width: 70px;
+   }
+   .solidheader .leftul{margin-right: 20px;}
+   .solidheader .rightul{margin-left: 20px;}
 </style>
 
-<div class="header">
+<div class="header transheader">
    <nav>
       <ul class="leftul">
          <li><a href="#">Home</a></li>
@@ -38,6 +47,26 @@
       </ul>
       <ul class="rightul">
          <li><a href="#">Films</a></li>
+         <li><a href="#">FAQs</a></li>
+         <li><a href="#">Contact</a></li>
+      </ul>
+   </nav>
+
+</div>
+
+
+
+<div class="header solidheader">
+   <nav>
+      <ul class="leftul">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Gallery</a></li>
+      </ul>
+      <img src="{{ url_for('static', filename='assets/images/logowhite.png') }}" alt="">
+     
+      <ul class="rightul">
+         <li><a href="#">Services</a></li>
          <li><a href="#">FAQs</a></li>
          <li><a href="#">Contact</a></li>
       </ul>

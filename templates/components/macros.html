@@ -1,19 +1,23 @@
-{% macro parallax(name) -%}
+{% macro parallax(name,randimg = 1) -%}
 <style>
 .parallaxdiv{
     width: 100%;
     min-height:200px;
     position: relative;
-    background-image: url("{{ url_for('static', filename='assets/images/pics/'~range(1,18)|random~'.jpg') }}");
     background-size: cover;
     background-attachment: fixed;
+}
+.parallaxdiv-{{name}} {
+  
+  background-image: url("{{ url_for('static', filename='assets/images/pics/'~randimg~'.jpg') }}");
 }
 .parallaxdiv div{
     
     width: 100%;
     height: 100%;
     position: absolute;
-    background: #631A5190;
+    /* background: #631A5190;*/
+    background: #06162190;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,10 +47,18 @@
   }
 
 </style>
-  <div class="parallaxdiv">
+  <div class="parallaxdiv parallaxdiv-{{name}} ">
       <div>
 
           <h2 class="effect-shine">{{name}}</h2>
         </div>
   </div>
+{%- endmacro %}
+
+
+{% macro anchor(name,href = "#") -%}
+
+  <span class="anchor">
+    <a href="{{href}}">{{name}}</a>
+  </span>
 {%- endmacro %}

@@ -325,11 +325,11 @@ ol {
 /*---------------------
    Header section
  -----------------------*/
-
+/* 
 .header {
 	padding: 40px 45px 0;
 	padding-top: 40px;
-}
+} */
 
 @media (max-width: 576px) {
 	.header {
