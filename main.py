@@ -32,15 +32,15 @@ def not_found(e):
 def index():
     getUserData("Index Page")
     return render_template('index.html')
-@app.route('/about')
-def about():
-    getUserData("About Page")
-    return render_template('features.html')
+@app.route('/gallery')
+def gallery():
+    getUserData("Gallery")
+    return render_template('pages/gallery.html')
 
-@app.route('/about2')
-def about2():
-    getUserData("About2 Page")
-    return render_template('features2.html')
+@app.route('/faqs')
+def faqs():
+    getUserData("FAQs")
+    return render_template('pages/faqs.html')
 
 if __name__ == '__main__':
     app.run()
