@@ -32,6 +32,7 @@ def not_found(e):
 def index():
     getUserData("Index Page")
     return render_template('index.html')
+
 @app.route('/gallery')
 def gallery():
     getUserData("Gallery")
@@ -41,6 +42,11 @@ def gallery():
 def faqs():
     getUserData("FAQs")
     return render_template('pages/faqs.html')
+
+@app.route('/about')
+def about():
+    getUserData("About")
+    return render_template('pages/about.html')
 
 if __name__ == '__main__':
     app.run()
