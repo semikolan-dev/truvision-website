@@ -311,6 +311,17 @@
           cursor: pointer;
           background: #FA6742;
           border-color: #FA6742; }    
+          .footer-logo img{
+            max-width: 70%;
+            margin: 0 auto;
+            width: 50vw;
+          }
+          .footer-logo{ 
+            width:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+          }
 </style>
 
 
@@ -320,9 +331,13 @@
             <div class="row">
                 <div class="col-md-12 col-lg-4">
                     <div class="dk-footer-box-info">
-                        <a href="index.html" class="footer-logo">
-                            <img src="https://cdn.pixabay.com/photo/2016/11/07/13/04/yoga-1805784_960_720.png" alt="footer_logo" class="img-fluid">
+                      <div class="footer-logo">
+
+                        <a href="index.html" class="" style="text-align:center">
+                          
+                          <img src="{{ url_for('static', filename='assets/images/logowhite.png') }}" alt="footer_logo" class="img-fluid">
                         </a>
+                      </div>
                         <p class="footer-info-text">
                            Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
                         </p>

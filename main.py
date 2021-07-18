@@ -48,6 +48,11 @@ def about():
     getUserData("About")
     return render_template('pages/about.html')
 
+@app.route('/contact')
+def contact():
+    getUserData("Contact")
+    return render_template('pages/contact.html')
+
 if __name__ == '__main__':
     app.run()
 
