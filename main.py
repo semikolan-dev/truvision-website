@@ -19,13 +19,6 @@ def getUserData(route):
 
 app = Flask(__name__)
 app.debug = True
-app.port = 8000
-
-# 404 Handling
-@app.errorhandler(404)
-def not_found(e):
-    getUserData("404 Page")
-    return render_template("pages/404.html")
 
 # Website
 @app.route('/')
@@ -52,6 +45,13 @@ def about():
 def contact():
     getUserData("Contact")
     return render_template('pages/contact.html')
+
+    
+# 404 Handling
+@app.errorhandler(404)
+def not_found(e):
+    getUserData("404 Page")
+    return render_template("pages/404.html")
 
 if __name__ == '__main__':
     app.run()
