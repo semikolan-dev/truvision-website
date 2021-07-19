@@ -38,14 +38,49 @@
    }
    .solidheader .leftul{margin-right: 20px;}
    .solidheader .rightul{margin-left: 20px;}
-
+   .menubar{
+      float: right;
+      position: fixed;
+      top: 5%;
+      right: 10%;
+      display: none;  
+      z-index: 1000;
+      color: #fffa;
+   }
 
    @media (max-width: 767px){
+      .solidheader{
+         width: 100%;
+         height:100vh;
+         display:flex;
+         align-items: center;
+         justify-content: center;
+         
+      }
+      .solidheader nav ul li{
+         text-align: center;
+         display:block;
+      }
+      .solidheader img{
+         position: absolute;
+         top: 5%;
+         transform: translateX(-10%) 
+
+      }
+      .menubar{
+         display: block;  
+      }
+      .transheader {
+         display: none !important;
+      }
       
+   .solidheader .leftul{margin-right: 0px;}
+   .solidheader .rightul{margin-left: 0px;}
    }
 </style>
 
 <div class="header transheader">
+   
    <nav>
       <ul class="leftul">
          <li><a href="/">Home</a></li>
@@ -62,6 +97,9 @@
 </div>
 
 
+<span class="menubar">
+   <i class="fa fa-bars"></i>
+</span>
 
 <div class="header solidheader">
    <nav>
@@ -80,3 +118,13 @@
    </nav>
 
 </div>
+<script>
+   $('.menubar').click(function(){
+      $('.solidheader').slideToggle();
+      });
+
+      if(window.innerWidth < 767){
+
+      $('.solidheader').hide();
+      }
+   </script>
