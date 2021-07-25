@@ -71,6 +71,15 @@ body {
   background: var(--primary);
 }
 
+/* Handle */
+::-webkit-scrollbar-thumb::before {
+  content: "dssd";
+
+  background: var(--primary);
+  height: 20px;
+  width: 20px;
+}
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--orange);

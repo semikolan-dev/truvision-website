@@ -7,12 +7,7 @@
 ======================================*/
 
 'use strict';
-
-
 (function($) {
-
-
-
 
 	/*-------------------
 		Hero Slider
@@ -26,6 +21,7 @@
 		variableWidth: true,
 		centerMode: true,
 		arrows: false,
+		asNavFor: '.hero-text-slider',
 		autoplay: true,
 		pauseOnHover:false,
 		autoplaySpeed: 3000
@@ -57,7 +53,6 @@
 		arrows: false,
 		asNavFor: '.hero-slider',
 	});
-
 
 })(jQuery);
 
