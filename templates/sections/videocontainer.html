@@ -72,7 +72,7 @@
  function scrollFunction() {
    var cond1 =  document.documentElement.scrollTop < 500;
    var cond2 =  document.documentElement.scrollTop < '100vh';
-   if(cond1 || cond2){
+   if(cond1){
     showTransNav()
 
      if(cond1){
@@ -111,11 +111,14 @@
     showSolidNav()
    }
    function showSolidNav(){
+    console.log('solid');
+
     $('.transheader').slideUp();
     $('#logoimg').hide()
      $('.solidheader').slideDown();
    }
    function showTransNav(){
+     console.log('show');
      $('.solidheader').slideUp();
     $('#logoimg').show()
     $('.transheader').slideDown();
