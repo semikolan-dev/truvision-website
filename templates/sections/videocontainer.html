@@ -73,44 +73,48 @@
    var cond1 =  document.documentElement.scrollTop < 500;
    var cond2 =  document.documentElement.scrollTop < '100vh';
    if(cond1){
-    showTransNav()
+        showTransNav()
 
-     if(cond1){
-   var logowidth = 300 - (document.documentElement.scrollTop/2);
-   var logotop = 30 - (document.documentElement.scrollTop/13);
-   var margin = document.documentElement.scrollTop* (90/300)
-   logowidth = logowidth<70 ? 70 : logowidth;
-   logotop = logotop<0 ? 0 : logotop;
-   margin = margin>70 ? 70 : margin;
-    document.getElementById("logoimg").style.width = logowidth + "px";
-    document.getElementById("logoimg").style.top = logotop + "%";
-    document.getElementsByClassName('leftul')[0].style.marginRight =  margin + 'px';
-    document.getElementsByClassName('rightul')[0].style.marginLeft =  margin + 'px';
-     //console.log(document.getElementById("logoimg").style.width);
-     console.log(margin);
-   }  
+        if(cond1){
+            var logowidth = 300 - (document.documentElement.scrollTop/2);
+            var logotop = 30 - (document.documentElement.scrollTop/13);
+            var margin = document.documentElement.scrollTop* (90/300)
+            logowidth = logowidth<70 ? 70 : logowidth;
+            logotop = logotop<0 ? 0 : logotop;
+            margin = margin>70 ? 70 : margin;
+            document.getElementById("logoimg").style.width = logowidth + "px";
+            document.getElementById("logoimg").style.top = logotop + "%";
+            document.getElementsByClassName('leftul')[0].style.marginRight =  margin + 'px';
+            document.getElementsByClassName('rightul')[0].style.marginLeft =  margin + 'px';
+            //console.log(document.getElementById("logoimg").style.width);
+             console.log(margin);
+        }  
+        else{
+
+            document.getElementById("logoimg").style.width = 100 + "px";
+            document.getElementById("logoimg").style.top = 0 + "%";
+            document.getElementsByClassName('leftul')[0].style.marginRight =  90 + 'px';
+            document.getElementsByClassName('rightul')[0].style.marginLeft =  90 + 'px';
+        }
+
+
+    }
    else{
-
-    document.getElementById("logoimg").style.width = 100 + "px";
-    document.getElementById("logoimg").style.top = 0 + "%";
-    document.getElementsByClassName('leftul')[0].style.marginRight =  90 + 'px';
-    document.getElementsByClassName('rightul')[0].style.marginLeft =  90 + 'px';
-   }
-
-
- }
-   else{
-    showSolidNav()
+        showSolidNav()
    }
    function showSolidNav(){
     console.log('solid');
 
     $('.transheader').slideUp();
-    $('#logoimg').hide()
-     //$('.solidheader').slideDown();
+       $('#logoimg').hide()
+       if (window.innerWidth > 767) {
+
+           $('.solidheader').slideDown();
+       }
+   
    }
    function showTransNav(){
-     console.log('show');
+     console.log('Trans');
      $('.solidheader').slideUp();
     $('#logoimg').show()
     $('.transheader').slideDown();
