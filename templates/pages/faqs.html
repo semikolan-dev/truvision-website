@@ -93,7 +93,7 @@
   }
   .accordion button[aria-expanded=true] + .accordion-content {
     opacity: 1;
-    max-height: 9em;
+    max-height: 13em;
     transition: all 200ms linear;
     will-change: opacity, max-height;
   }
@@ -125,14 +125,13 @@
 <div class="accordion-container">
   <div class="accordion">
     {% set faqs = [
-      [" Where is The Wedding Story based? Do you travel worldwide?","We are based in Mumbai (India), London (UK) and Boston (USA), and we travel all across the world to shoot weddings. Some of our best weddings have been shot in locations like Istanbul, Puerto Rico, Barcelona, Dubai, Montreux, Seychelles, Marrakech among others."],
-      ["Is TVF into wedding planning or just coverage?","Currently we are only into coverage (photos and videos) but having worked with some of the top wedding management teams, we are happy to suggest some names at no extra costs. An inspired management and decor team naturally act as embellishments for a beautiful film! In fact, you can check the Planners section on our website to check out the work of some event planners & wedding décor companies who are splendid at their jobs. "],
-      ["Can we also have additional photographers / videographers along with TVF?","Sorry, we absolutely do not recommend it. Apart from being uneconomical, it may obstruct and tamper with our work.  The advantage of a single team is that we will get clean, unobstructed visual frames without local photographers jumping into our frames and ruining the film moments."],
-      ["What is a pre-wedding shoot and how do we go about it?","A pre-wedding shoot is a photo/video shoot of the couple done before the wedding that portrays the bond they share with each other. Since the wedding is a hectic time to be together, the couple get this day off with each other to shoot some 'Relaxed, Together & Fun' images and videos and these can be used in the highlight film or as a separate two-minute pre-wedding film that can be shown during the sangeet or the wedding. A typical pre-wedding shoot lasts between 4-8 hours."],
-      ["When and where should the audio bytes be ideally recorded?","Anywhere with silence in the background. Any time during the wedding. We cannot do any interviews / audio bytes after the wedding is over. A rare case exception is understood but usually we lock all interviews on the very first day of the wedding as it gets stressful during the later days."],
-      ["Who decides the music and film name for the Highlight film?","Music and song selections are collectively done by the wedding director, the client and the edit team. A client co-ordinator is assigned for this under the guidance of the creative visualiser of the project. The film names are usually suggested either by the client or the film director and approved by both. "],
-      ["Will our wedding planners’ and other vendors’ names feature in the film?","Oh absolutely. And they will love their names on the big screen just like acknowledgements in a feature film. We have a section at the start of our film called ‘CREDITS MONTAGE’ where these names appear in a specific order. "]
-   
+      ["Where is The TVF based? Do you travel worldwide?","We cover PAN India, Destination coverages - Rajasthan, Udaipur, Goa, Jaipur. We have a team to cater to international wedding coverages like Thailand, Bangkok, Switzerland, Turkey, Dubai."],
+      ["Is TVF into wedding planning or just coverage?","Currently, we are only into coverage (photos and videos) but having worked with some of the top wedding management teams, we are happy to suggest some names at no extra cost. We are into wedding photography & video coverages."],
+      ["Is there a need to hire another photographer?","No, we have in-house sufficient professional teams, who are highly expert in their respective (photography & videography) fields. They have huge experience of their expertise."],
+      ["What is a pre-wedding shoot and how do we go about it?","A pre-wedding shoot is a photo/video shoot of the couple done before the wedding that portrays the bond they share with each other. Since the wedding is a hectic time to be together, the couple get this day off with each other to shoot some 'Relaxed, Together & Fun' images and videos and these can be used in the highlight film or as a separate two-minute pre-wedding film that can be shown during the sangeet or the wedding."],
+      ["When and where should the audio bytes be ideally recorded?","Anywhere with silence in the background. Any time during the wedding. We can also do any interviews/audio bytes before and after the wedding. At any convenient time of the couple/family. These bytes can be used in making a good cinematic film."],
+      ["How do you make the cost for photography/videography of the event?","We consider the no. of man-days involved, the members of the expert team involved & post-event activities to be done, of course, the cost of deliverables will make towards the cost consideration required to be quoted."],
+      
       ] %}
     {% for faq in faqs %}
     <div class="accordion-item">
