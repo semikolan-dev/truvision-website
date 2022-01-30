@@ -18,10 +18,10 @@ font-family: 'blackchancery';
 	<!-- Hero Section -->
 	<section class="hero__section">
 		<div class="hero-slider">
-            {% for img in range(1,18) %}
+            {% for img in range(1,5) %}
 			<div class="slide-item">
-				<a class="fresco" href="{{ url_for('static', filename='assets/images/pics/'~img~'.jpg') }}" data-fresco-group="projects">
-					<img src="{{ url_for('static', filename='assets/images/pics/'~img~'.jpg') }}" alt="">
+				<a class="fresco" href="{{ url_for('static', filename='assets/images/location/'~img~'.jpg') }}" data-fresco-group="projects">
+					<img src="{{ url_for('static', filename='assets/images/location/'~img~'.jpg') }}" alt="">
 				</a>
 				
 			</div>
@@ -30,10 +30,17 @@ font-family: 'blackchancery';
 		</div>
 		<div class="hero-text-slider">
 			
-            {% for img in range(1,18) %}
+{% set locations = [
+	"Bhopal",
+	"Indore",
+	"Gwalior",
+	"Chattarpur",
+	"Bhopal",
+	  ] %}
+            {% for l in locations %}
 			<div class="text-item">
-				<h2>Bhopal - {{img}}</h2>
-				<p>Madhya Pradesh</p> 
+				<h2>{{l}}</h2>
+				<!-- <p>Madhya Pradesh</p>  -->
 			</div>
             {% endfor %}
 		</div>
